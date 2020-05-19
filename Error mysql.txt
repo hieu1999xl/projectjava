@@ -1,0 +1,6 @@
+﻿Hướng dẫn sửa lỗi khi bị gặp phải:
+Lỗi Quyen administrator :
+vao properties Mycomputer -->Enviroment Varibles--> Ở chỗ System variables: New...-->Path và C:\Program Files\MySQL\MySQL Server 8.0\bin
+location of mysql configuration file (ie my.cnf) not specified:
+Zô  mysql workbench ---> chỗ Instance có cái cở lê thì click zô  --->Thêm C:\ProgramData\MySQL\MySQL Server 8.0\my.ini vào
+Configuration File Section:

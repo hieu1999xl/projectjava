@@ -1,0 +1,14 @@
+﻿Hướng dẫn sửa lỗi khi gặp những lỗi sau:
+
+Lỗi: java.sql.SQLException: Unknown initial character set index '255' received from server for connector 8.0.11
+Cách sửa : 
+Vô MySQL Workbench --->nhìn zô Instance thì click zô Options File-->Trong Tab General tìm character-set-server:utf8
+hoặc thêm ?useUnicode=true&characterEncoding=utf8 vào sau kết nối vd: jdbc:mysql://localhost:3306/hrdatabase?useUnicode=true&characterEncoding=utf8
+
+
+Lỗi : Client does not support authentication protocol requested by server; consider upgrading MySQL client:
+Cách sửa : 
+mở cmd của: "MySQL Command Line Client"(Start(cái thanh start góc trái màn hình máy tính mày đó) -->MySQL-->MySQL Server 8.0--->MySQL Command Line Client) và thực thi lệnh dưới đây:
+ALTER USER 'my_username'@'my_host' IDENTIFIED WITH 'mysql_native_password' BY 'my_password';
+
+ví dụ: ALTER USER 'root'@'localhost' IDENTIFIED WITH 'mysql_native_password' BY 'admin';  (có dấu chấm phẩy sau)
